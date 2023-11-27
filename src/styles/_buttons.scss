@@ -1,0 +1,20 @@
+@use 'colors';
+
+.button-primary {
+	background-color: colors.$primary;
+	color: colors.$white;
+	padding: 8px 16px;
+	display: flex;
+	border-radius: 8px;
+	font-weight: 600;
+	letter-spacing: 0.025em;
+
+	&:hover {
+		background-color: colors.$primary-hover;
+	}
+
+	&:active {
+		background-color: colors.$primary;
+		scale: 95%;
+	}
+}
