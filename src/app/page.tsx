@@ -38,10 +38,10 @@ export default function Home() {
       <div className='lista-filmes w-full flex flex-wrap gap-12 mt-12 justify-center'>
         {filmes.map((filme) => {
           return (
-            <article key={filme.id} className='cursor-pointer nothover hover:scale-110 duration-300'>
-              <Link href={`/filme/${filme.id}`}>
-              <img src={`http://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title} className='mb-2 max-w-56 border-8 shadow-lg' />
-              <strong>{filme.title}</strong>
+            <article key={(filme as {id: number}).id} className='cursor-pointer nothover hover:scale-110 duration-300'>
+              <Link href={`/filme/${(filme as {id: number}).id}`}>
+              <img src={`http://image.tmdb.org/t/p/original/${(filme as {poster_path: string}).poster_path}`} alt={(filme as { title: string }).title} className='mb-2 max-w-56 border-8 shadow-lg' />
+              <strong>{(filme as { title: string }).title}</strong>
               </Link>
             </article>
           )
