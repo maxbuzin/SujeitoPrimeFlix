@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-zinc-800 text-zinc-100 text-balance
+}
+
+h1 {
+  @apply text-2xl font-bold mb-2
+}
+
+.nothover:not(:hover){
+  @apply opacity-75
+}
